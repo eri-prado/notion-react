@@ -1,103 +1,42 @@
 export const initialContent = `
 <h1>
-Desvendando o Tailwind CSS: Simplificando a estilização no
-desenvolvimento web
+A Importância dos Testes na Programação: Garantindo a Qualidade do seu Código
 </h1>
 
 <h2>Introdução</h2>
 
 <p>
-Ao criar sites e aplicativos da web, um dos maiores desafios
-enfrentados pelos desenvolvedores é a estilização consistente e
-eficiente. Felizmente, uma solução moderna e poderosa surge para
-atender a essas necessidades: o Tailwind CSS. Neste artigo,
-exploraremos o que é o Tailwind CSS e como ele pode revolucionar o
-processo de estilização na web.
+Quando se trata de desenvolvimento de software, uma das práticas mais cruciais é a implementação de testes. Os testes na programação desempenham um papel fundamental para garantir a qualidade do código, a estabilidade do sistema e a satisfação dos usuários. Neste artigo, vamos explorar a importância dos testes e como eles podem ser aplicados ao desenvolvimento de aplicações utilizando React, uma biblioteca JavaScript popular para construção de interfaces de usuário
 </p>
 
-<h2>O que é o Tailwind CSS?</h2>
+<h2>O que são Testes na Programação?</h2>
 
 <p>
-O Tailwind CSS é uma estrutura de CSS utilitária de baixo nível
-que permite estilizar componentes de maneira rápida e eficiente.
-Diferente das abordagens tradicionais de criação de estilos, onde
-os desenvolvedores precisam escrever CSS personalizado, o Tailwind
-CSS oferece uma abordagem orientada a classes, onde você utiliza
-classes pré-definidas para estilizar elementos.
+Testes na programação referem-se a um conjunto de técnicas e práticas que permitem aos desenvolvedores verificar se o código está funcionando conforme o esperado. Eles envolvem a criação de cenários de teste para exercitar diferentes partes do código e verificar se o comportamento resultante é o desejado.
 </p>
 
-<h2>Vantagens do Tailwind CSS</h2>
-
+<p>Existem diferentes tipos de testes na programação, como:</p>
 <ol>
-<li>
-  Produtividade aprimorada: O Tailwind CSS proporciona uma grande
-  produtividade ao desenvolvedor. Com um conjunto abrangente de
-  classes utilitárias disponíveis, você pode estilizar seus
-  elementos apenas adicionando as classes necessárias aos
-  elementos HTML. Não é preciso escrever CSS personalizado para
-  cada componente, economizando tempo e esforço.
-</li>
-<li>
-  Flexibilidade e personalização: Embora o Tailwind CSS ofereça um
-  conjunto predefinido de classes, ele também permite personalizar
-  e estender essas classes para atender às suas necessidades
-  específicas. Você pode aproveitar os utilitários básicos
-  fornecidos pelo Tailwind CSS e, se necessário, criar classes
-  personalizadas para obter estilos únicos para seus componentes.
-</li>
-<li>
-  Manutenção simplificada: Com o Tailwind CSS, a manutenção do
-  código se torna mais fácil. As classes utilitárias fornecidas
-  são altamente descritivas, o que facilita a compreensão das
-  intenções de estilo. Além disso, como as classes são
-  reutilizáveis, qualquer alteração de estilo feita em uma classe
-  é aplicada automaticamente em todos os elementos que a utilizam,
-  tornando a manutenção mais eficiente.
-</li>
-<li>
-  Design responsivo: O Tailwind CSS possui uma abordagem
-  incorporada para o design responsivo. Ele fornece classes
-  utilitárias que permitem adaptar o estilo dos componentes para
-  diferentes tamanhos de tela, sem a necessidade de escrever CSS
-  adicional. Isso simplifica significativamente o processo de
-  criação de layouts responsivos.
-</li>
+  <li><strong>Testes Unitários:</strong> Focados em testar unidades individuais do código, como funções e métodos, isolando-as do restante do sistema.</li>
+  <li><strong>Testes de Integração:</strong> Verificam se as diferentes unidades do código trabalham corretamente quando combinadas e integradas.</li>
+  <li><strong>Testes End-to-End (E2E):</strong> Verifica todo o aplicativo, simulando interações de usuário, garantindo integração e conformidade com requisitos.</li>
 </ol>
-
-<h2>Exemplo de uso do Tailwind CSS em HTML</h2>
-
-<p>
-Aqui está um exemplo de como você pode utilizar o Tailwind CSS em
-um arquivo HTML para estilizar um botão:
-</p>
-
+<h3>Testando com React</h3>
+<p>React é amplamente utilizado no desenvolvimento de aplicações web modernas e, para garantir que nossos componentes funcionem conforme o esperado, podemos aplicar testes usando diversas ferramentas e bibliotecas, como Jest e React Testing Library.</p>
+<p>Aqui está um exemplo simples de um teste unitário em React usando Jest e React Testing Library:</p>
 <pre>
 <code class="language-javascript">
-  <button/> Clique Aqui </button>
+describe('Button', () => {
+  it('should render button', () => {
+    const {getByRole} = render(<Button>button</Button>)
+
+    const buttonElement = getByRole('button')
+
+    expect(buttonElement).toBeInTheDocument();
+  })
+})
 </code>
 </pre>
 
-<p>
-Neste exemplo, estamos utilizando classes como{' '}
-<code>bg-blue-500</code>, <code>hover:bg-blue-700</code>,{' '}
-<code>text-white</code>, <code>font-bold</code>, <code>py-2</code>
-, <code>px-4</code> e <code>rounded</code> para estilizar o botão.
-Cada classe é responsável por uma determinada propriedade de
-estilo, como cor de fundo, cor de fundo ao passar o mouse, cor do
-texto, tamanho do preenchimento vertical e horizontal, e bordas
-arredondadas.
-</p>
 
-<h2>Conclusão</h2>
-
-<p>
-O Tailwind CSS é uma ferramenta poderosa que simplifica e agiliza
-a estilização no desenvolvimento web. Com sua abordagem baseada em
-classes utilitárias, ele oferece produtividade, flexibilidade,
-manutenção simplificada e design responsivo. Ao adotar o Tailwind
-CSS, você pode economizar tempo, melhorar a eficiência do seu
-código e criar interfaces consistentes e esteticamente agradáveis
-para seus projetos web. Experimente o Tailwind CSS e descubra como
-ele pode revolucionar sua abordagem de estilização.
-</p>
 `
