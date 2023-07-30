@@ -1,4 +1,5 @@
 import Editor from './components/Editor';
+import HeaderEditor from './components/HeaderEditor';
 import Sidebar from './components/Sidebar';
 
 export default function Home() {
@@ -8,7 +9,8 @@ export default function Home() {
         <aside className="bg-zinc-50 border-r-zinc-100">
           <Sidebar />
         </aside>
-        <main className="p-4">
+        <main>
+          <HeaderEditor />
           <Editor />
         </main>
       </div>

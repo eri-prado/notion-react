@@ -42,7 +42,7 @@ export default function Editor() {
     },
   });
   return (
-    <>
+    <div className="p-4">
       {editor ? (
         <EditorContent
           className="max-w-[700] mx-auto pt-16 prose prose-violet"
@@ -135,6 +135,6 @@ export default function Editor() {
           </div>
         </BubbleMenu>
       )}
-    </>
+    </div>
   );
 }
