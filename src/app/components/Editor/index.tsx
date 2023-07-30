@@ -22,6 +22,7 @@ import {
 } from 'react-icons/rx';
 import BubbleButton from '../BubleButton.tsx';
 import ButtonMenu from '../ButtonMenu';
+import SkeletonLoading from '../SkeletonLoading';
 
 lowlight.registerLanguage('js', js);
 
@@ -42,10 +43,14 @@ export default function Editor() {
   });
   return (
     <>
-      <EditorContent
-        className="max-w-[700] mx-auto pt-16 prose prose-violet"
-        editor={editor}
-      />
+      {editor ? (
+        <EditorContent
+          className="max-w-[700] mx-auto pt-16 prose prose-violet"
+          editor={editor}
+        />
+      ) : (
+        <SkeletonLoading />
+      )}
       {editor && (
         <FloatingMenu
           editor={editor}
