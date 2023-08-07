@@ -45,7 +45,7 @@ export default function Editor() {
     <div className="p-4">
       {editor ? (
         <EditorContent
-          className="max-w-[700] mx-auto pt-16 prose prose-violet"
+          className="max-w-[700] mx-auto pt-16 prose dark:prose-invert prose-violet"
           editor={editor}
         />
       ) : (
